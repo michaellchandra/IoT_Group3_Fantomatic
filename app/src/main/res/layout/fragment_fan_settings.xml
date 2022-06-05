@@ -53,7 +53,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Switch
-                    android:id="@+id/switch1"
+                    android:id="@+id/switch_setting_power"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="8dp"
@@ -132,12 +132,13 @@
                     app:layout_constraintTop_toTopOf="@+id/imageView" />
 
                 <TextView
-                    android:id="@+id/textView20"
+                    android:id="@+id/tv_setting_temperature"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="4dp"
                     android:fontFamily="sans-serif-black"
                     android:text="30"
+                    android:textAlignment="textEnd"
                     android:textColor="#3C80EE"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="@+id/textView18"
@@ -181,14 +182,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textView21">
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/rb_setting_automatic"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="Automatic"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/rb_setting_manual"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
@@ -197,11 +198,12 @@
         </RadioGroup>
 
         <com.google.android.material.slider.Slider
+            android:id="@+id/slider_setting_fanspeed"
             android:layout_width="315dp"
             android:layout_height="2dp"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="13dp"
 
+            android:layout_marginTop="13dp"
             android:stepSize="25.0"
             android:valueFrom="0.0"
             android:valueTo="100.0"
@@ -235,6 +237,16 @@
             android:src="@drawable/fan"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+        <ImageView
+            android:id="@+id/img_setting_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="47dp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
