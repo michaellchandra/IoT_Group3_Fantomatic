@@ -10,8 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
-import com.google.android.material.snackbar.Snackbar;
 import com.uc.iot_group3_fantomatic.helper.FanSetting;
 import com.uc.iot_group3_fantomatic.helper.Gate;
 
