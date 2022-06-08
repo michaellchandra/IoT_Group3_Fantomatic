@@ -5,13 +5,18 @@
       <map>
         <entry key="..\:/UNIVERSITAS CIPUTRA/Mata Kuliah/Semester 4/Internet of Things/ALP/app/src/main/res/layout/fragment_fan_settings.xml" value="0.25" />
         <entry key="..\:/UNIVERSITAS CIPUTRA/Mata Kuliah/Semester 4/Internet of Things/ALP/app/src/main/res/layout/fragment_home.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Kirihara_Ichijou/AndroidStudioProjects/IoT_Group3_Fantomatic/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Kirihara_Ichijou/AndroidStudioProjects/IoT_Group3_Fantomatic/app/src/main/res/layout/activity_splash_screen.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Kirihara_Ichijou/AndroidStudioProjects/IoT_Group3_Fantomatic/app/src/main/res/layout/fragment_fan_settings.xml" value="0.22" />
+        <entry key="..\:/Users/Kirihara_Ichijou/AndroidStudioProjects/IoT_Group3_Fantomatic/app/src/main/res/layout/fragment_home.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Kirihara_Ichijou/AndroidStudioProjects/IoT_Group3_Fantomatic/app/src/main/res/menu/menu.xml" value="0.3614583333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.30061636662137686" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3035145414048347" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
