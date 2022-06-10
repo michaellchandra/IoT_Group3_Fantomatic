@@ -206,7 +206,8 @@
             android:stepSize="25.0"
             android:valueFrom="0.0"
             android:valueTo="100.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/image_fan"
             app:layout_constraintTop_toBottomOf="@+id/textView22"
             app:thumbColor="@color/teal_200"
             app:tickColor="@color/white"
@@ -228,7 +229,7 @@
             app:layout_constraintTop_toBottomOf="@+id/rb_pref" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/image_fan"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="17dp"

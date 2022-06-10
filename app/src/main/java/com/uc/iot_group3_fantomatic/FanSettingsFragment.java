@@ -1,5 +1,6 @@
 package com.uc.iot_group3_fantomatic;
 
+import android.media.Image;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
@@ -25,6 +27,7 @@ public class FanSettingsFragment extends Fragment {
     private RadioButton rb_auto, rb_manu;
     private RadioGroup rb_pref;
     private TextView text_temp;
+    private ImageView image_fan;
     private Slider slider_fan_speed;
     private View view;
     private FanSetting fs = Gate.fs;
@@ -44,6 +47,7 @@ public class FanSettingsFragment extends Fragment {
         rb_manu = view.findViewById(R.id.rb_manu);
         text_temp = view.findViewById(R.id.text_temp);
         rb_pref = view.findViewById(R.id.rb_pref);
+        image_fan = view.findViewById(R.id.image_fan);
         slider_fan_speed = view.findViewById(R.id.slider_fan_speed);
     }
 
@@ -65,9 +69,13 @@ public class FanSettingsFragment extends Fragment {
                 switch (i) {
                     case R.id.rb_auto:
                         fs.setIsAuto("true");
+                        switch_power.setVisibility(View.INVISIBLE);
+                        image_fan.setVisibility(View.INVISIBLE);
                         break;
                     case R.id.rb_manu:
                         fs.setIsAuto("false");
+                        switch_power.setVisibility(View.VISIBLE);
+                        image_fan.setVisibility(View.VISIBLE);
                         break;
                 }
             }

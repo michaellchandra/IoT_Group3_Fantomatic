@@ -45,7 +45,7 @@ public class HomeFragment extends Fragment {
         fspeed = fs.getCurrentSpeed();
         handler.removeCallbacks(temprun);
         handler.removeCallbacks(fanrun);
-        handler.removeCallbacks(fanrun2);
+        handler.removeCallbacks(temprun2);
 
         if (power == "true"){
             if(auto == "true"){
@@ -53,8 +53,7 @@ public class HomeFragment extends Fragment {
                 handler.post(fanrun);
             }else{
                 text_indicate_speed.setText(fspeed+"%");
-                handler.post(temprun);
-                handler.post(fanrun2);
+                handler.post(temprun2);
             }
         } else {
             text_indicate_temp.setText("0");
@@ -78,18 +77,46 @@ public class HomeFragment extends Fragment {
         }
     };
 
+    private Runnable temprun2 = new Runnable() {
+        @Override
+        public void run() {
+            temp = temp + random.nextInt(10) + 1;
+
+            if (temp >= 40) {
+                temp = 40;
+            }
+
+            if (fspeed == 25){
+                temp = temp - random.nextInt(6) + 1;
+            }
+            if (fspeed == 50) {
+                temp = temp - random.nextInt(7) + 1;
+            }
+            if (fspeed == 75) {
+                temp = temp - random.nextInt(8) + 1;
+            }
+            if (fspeed == 100) {
+                temp = temp - random.nextInt(9) + 1;
+            }
+
+            text_indicate_temp.setText(""+temp);
+
+            handler.postDelayed(temprun2, 1000);
+        }
+    };
+
     private Runnable fanrun2 = new Runnable() {
         @Override
         public void run() {
 
             if (fspeed == 25){
-                temp -= random.nextInt(5) + 1;
+                temp = temp - random.nextInt(5) + 1;
             } else if (fspeed == 50) {
-                temp -= random.nextInt(6) + 1;
+                temp = temp - random.nextInt(6) + 1;
             } else if (fspeed == 75) {
-                temp -= random.nextInt(7) + 1;
+                temp = temp - random.nextInt(7) + 1;
             } else if (fspeed == 100) {
-                temp -= random.nextInt(8) + 1;
+                temp = temp - random.nextInt(8) + 1;
             }
 
             handler.postDelayed(fanrun2, 2500);
